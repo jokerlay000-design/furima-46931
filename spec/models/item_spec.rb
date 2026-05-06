@@ -4,7 +4,7 @@ RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.build(:item)
   end
-  
+
   describe '商品出品' do
     context '商品が出品できる時' do
       it '全ての項目が存在すれば出品できる' do
@@ -88,9 +88,8 @@ RSpec.describe Item, type: :model do
       it 'ユーザーが紐付いていなければ出品できない' do
         @item.user = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("User must exist")
+        expect(@item.errors.full_messages).to include('User must exist')
       end
     end
   end
 end
-
