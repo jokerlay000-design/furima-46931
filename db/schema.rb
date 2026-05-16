@@ -40,14 +40,14 @@ ActiveRecord::Schema[7.1].define(version: 2026_05_14_131242) do
   end
 
   create_table "items", charset: "utf8mb3", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "description", null: false
-    t.integer "category_id", null: false
-    t.integer "condition_id", null: false
-    t.integer "shipping_cost_id", null: false
-    t.integer "prefecture_id", null: false
-    t.integer "shipping_day_id", null: false
-    t.integer "price", null: false
+    t.string "name"
+    t.text "description"
+    t.integer "category_id"
+    t.integer "condition_id"
+    t.integer "shipping_cost_id"
+    t.integer "prefecture_id"
+    t.integer "shipping_day_id"
+    t.integer "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
