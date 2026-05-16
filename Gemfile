@@ -82,3 +82,6 @@ group :development do
   gem 'rubocop', '1.71.2', require: false
 end
 gem 'active_hash'
+gem 'payjp'
+gem 'ffi', '~> 1.17.4'
+gem 'pry-rails'
