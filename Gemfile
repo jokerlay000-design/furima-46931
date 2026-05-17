@@ -86,3 +86,4 @@ gem 'payjp'
 gem 'ffi', '~> 1.17.4'
 gem 'pry-rails'
 gem 'gon'
+gem "aws-sdk-s3", require: false
