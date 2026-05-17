@@ -59,6 +59,11 @@ RSpec.describe OrderForm, type: :model do
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include('Phone number は10桁以上11桁以内の半角数値のみ入力可能です')
       end
+      it '電話番号に半角数字以外が含まれている場合は購入できない' do
+       @order_form.phone_number = '090-1234-567'
+       @order_form.valid?
+       expect(@order_form.errors.full_messages).to include('Phone number は10桁以上11桁以内の半角数値のみ入力可能です')
+      end
       it 'トークンがなければ購入できない' do
         @order_form.token = ''
         @order_form.valid?
